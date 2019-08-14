@@ -5,8 +5,8 @@
 // VSCodeでESLint+@typescript-eslint+Prettierを導入する
 // https://qiita.com/madono/items/a134e904e891c5cb1d20
 
-const a = 3;
-const b = "aaaaa";
+const a: number = 3;
+const b: string = "aaaaa";
 
 interface MyObj {
   foo: string;
