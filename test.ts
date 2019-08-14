@@ -8,6 +8,7 @@
 const a: number = 3;
 const b: string = "aaaaa";
 
+// Objectの型定義
 interface MyObj {
   foo: string;
   bar: number;
