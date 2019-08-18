@@ -1,14 +1,7 @@
-// typescript文法参考
-// https://qiita.com/uhyo/items/e2fdef2d3236b9bfe74a
-// tsconfig設定参考
-// https://qiita.com/alfas/items/539ade65926deb530e0e
-// VSCodeでESLint+@typescript-eslint+Prettierを導入する
-// https://qiita.com/madono/items/a134e904e891c5cb1d20
-
 const a: number = 3;
 const b: string = "aaaaa";
 
-// Objectの型定義
+// Objectの型定義にはinterfaceを使う 
 interface MyObj {
   foo: string;
   bar: number;
