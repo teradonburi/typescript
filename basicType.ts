@@ -49,8 +49,34 @@ enum Color2 {
   Green = 2, // 2
   Blue = 4 // 4
 }
-let c2: Color2 = Color2.Blue;
+const c2: Color2 = Color2.Blue;
 console.log(c2); // 4
+
+// 文字列も指定できる
+enum Direction {
+  Up = "UP",
+  Down = "DOWN",
+  Left = "LEFT",
+  Right = "RIGHT"
+}
+const dir: Direction = Direction.Up;
+console.log(dir);
+
+// 列挙化型に割り当てられる値
+// 1.リテラル列挙式（基本的には文字列リテラルまたは数値リテラル）
+// 2.以前に定義された定数列挙型メンバーへの参照（異なる列挙型から発生する場合があります）
+// 3.括弧で囲まれた定数列挙式
+// 4.定数列挙式に適用される+、-、〜単項演算子のいずれか
+// 5.+、-、*、/、％、<<、>>、>>>、＆、|、^オペランドとして定数列挙式を持つ二項演算子
+// 定数列挙式がNaNまたはInfinityに評価されると、コンパイル時エラーになります。
+enum FileAccess {
+  None,
+  Read = 1 << 1,
+  Write = 1 << 2,
+  ReadWrite = Read | Write,
+  G = "123".length
+}
+console.log(FileAccess);
 
 // Any型：どんな型でも入れることができる。
 // サードパーティの型定義がないライブラリを使うときや、既存のJSプロジェクトをマイグレーションする時に主に使う
