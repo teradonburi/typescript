@@ -100,6 +100,32 @@ str = null;
 str = "文字列";
 console.log(str);
 
+// 関数型
+// 引数の型とコロン:の後ろは戻り値の型を指定します。
+function add(x: number, y: number): number {
+  return x + y;
+}
+console.log(add(1, 2));
+
+// ?で省略可能な引数を指定できる
+function buildName(firstName: string, lastName?: string): string {
+  if (lastName) return firstName + " " + lastName;
+  else return firstName;
+}
+
+const result1 = buildName("Bob", "Adams"); // OK
+// const result2 = buildName("Bob", "Adams", "Sr."); // エラー：引数が多すぎます
+const result3 = buildName("Bob"); // OK
+console.log(result1);
+console.log(result3);
+
+function concatName(firstName: string, ...restOfName: string[]): string {
+  return firstName + " " + restOfName.join(" ");
+}
+
+const buildNameFun: (fname: string, ...rest: string[]) => string = concatName;
+console.log(buildNameFun("FirstName", "MiddleName", "LastName"));
+
 // Never型：never型は常に例外をスローする関数または例外でreturn文が呼ばれない関数の戻り値として使います。
 // never型はすべての型のサプタイプであるが、値を割り当てすることはできません。
 
