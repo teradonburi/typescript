@@ -1,4 +1,4 @@
-// public, protected, privateのアクセッサが使える
+// public, protected, privateのアクセス制御子が使える
 // protected, privateはTypeScript固有の機能
 class Person {
   protected name: string; // 継承先からは参照できるけど、外部公開はしない
