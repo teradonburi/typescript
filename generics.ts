@@ -129,14 +129,14 @@ class Test {
   }
 }
 // クラス型を引数に渡す
-function create<T>(c: { new (): T }): T {
+function createClassInstance<T>(c: { new (): T }): T {
   return new c(); // インスタンス生成
 }
 // こちらでも同じ
 // function create<T>(c: new () => T ): T {
 //   return new c(); // インスタンス生成
 // }
-console.log(create(Test));
+console.log(createClassInstance(Test));
 
 // より高度な例では、prototypeプロパティを使用して、
 // コンストラクター関数とクラス型のインスタンス側との関係を推測および制約します。
