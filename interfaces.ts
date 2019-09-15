@@ -20,7 +20,7 @@ let myObj2 = { size: 10, label: "Size 20 Object" };
 printLabel2(myObj2);
 
 // オプショナルなプロパティを持つinterface
-// オプションのプロパティの利点は、これらの利用可能なプロパティを記述できると同時に、インターフェイスの一部ではないプロパティの使用を防止できることです。
+// オプショナルプロパティの利点は、これらの利用可能なプロパティを記述できると同時に、インターフェースの一部ではないプロパティの使用を防止できることです。
 interface SquareConfig {
   color?: string; // 省略可能なプロパティは?をつける
   width?: number;
@@ -100,7 +100,7 @@ interface SearchFunc {
   (source: string, subString: string): boolean;
 }
 
-// 定義したら、この関数型のインターフェイスを他のインターフェイスと同じように使用できます。
+// 定義したら、この関数型のインターフェースを他のインターフェースと同じように使用できます。
 // ここでは、関数型の変数を作成して、同じ型の関数値を割り当てる方法を示します。
 let mySearch: SearchFunc;
 mySearch = function(source: string, subString: string): boolean {
@@ -110,7 +110,7 @@ mySearch = function(source: string, subString: string): boolean {
 console.log(mySearch("Hello World!", "or"));
 
 // インデックス可能な型(Indexable Types)
-// インターフェイスを使用して関数型を記述する方法と同様に、
+// インターフェースを使用して関数型を記述する方法と同様に、
 // a[10]やageMap["daniel"]のように「インデックスを付ける」ことができる型を記述することもできます。
 
 // インデックスシグネチャを持つStringArrayインターフェイスがあります。
@@ -180,7 +180,7 @@ let myArray2: ReadonlyStringArray = ["Alice", "Bob"];
 console.log(myArray2);
 
 // クラスの型（Class Types）
-// C＃やJavaなどの言語のインターフェイスの最も一般的な使用法の1つである、
+// C＃やJavaなどの言語のインターフェースの最も一般的な使用法の1つである、
 // クラスがインタフェースの実装を満たすことを明示的に強制することは、TypeScriptでも可能です。
 interface ClockInterface1 {
   currentTime: Date;
@@ -203,7 +203,7 @@ console.log(clock.currentTime);
 
 // コンストラクタシグネチャ
 // コンストラクタの引数を定義することができます。
-// クラスにインターフェイスを使用する場合、クラスにはstatic型とインスタンス型の2つの型があります。
+// クラスにインターフェースを使用する場合、クラスにはstatic型とインスタンス型の2つの型があります。
 // クラス式で書くとシンプルにかけます。
 
 // インスタンス型
@@ -289,9 +289,9 @@ c.interval = 5.0;
 console.log(c);
 
 // インターフェースのクラス継承（Interfaces Extending Classes）
-// インターフェイス型がクラス型を拡張すると、クラスのメンバーは継承されますが、実装は継承されません。
+// インターフェース型がクラス型を拡張すると、クラスのメンバーは継承されますが、実装は継承されません。
 // インターフェースが実装を提供せずにクラスのすべてのメンバーを宣言したかのように振る舞います。
-// インターフェイスは、基本クラスのprivate,protectedされたメンバーも継承します。
+// インターフェースは、基本クラスのprivate,protectedされたメンバーも継承します。
 // クラス継承したインタフェースを利用する場合は親クラスの継承も必須化されます。
 
 class Control {

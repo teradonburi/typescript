@@ -1,4 +1,4 @@
-// TypeScriptには、一般的な型変換を容易にするいくつかのユーティリティタイプが用意されています。
+// TypeScriptには、一般的な型変換を容易にするいくつかのユーティリティ型が用意されています。
 // これらのユーティリティはグローバルに利用可能です。
 // 参考：https://log.pocka.io/posts/typescript-builtin-type-functions/
 
