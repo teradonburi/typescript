@@ -24,7 +24,7 @@ console.log(color);
 // Array型：配列の型
 let list: number[] = [1, 2, 3];
 // Array<number>のジェネリクスで書くこともできる
-//let list: Array<number> = [1, 2, 3];
+// let list: Array<number> = [1, 2, 3];
 console.log(list);
 
 // Tuple型：配列の型（別の型が入っている配列）
@@ -184,12 +184,20 @@ function create(o: object): void {
 }
 
 create({ prop: 0 }); // OK
-
 // create(42); // エラー
 // create("string"); // エラー
 // create(false); // エラー
 // create(null); // エラー
 // create(undefined); // エラー
+
+// Object、{}、object型の違い
+// 参考：https://blog.yux3.net/entry/2017/06/08/202859
+// let o1: Object;
+// let o2: object;
+// let o3: {};
+// 通常よく使うのはo3: {}ですが、部分的構造化による弱い型付けのため、意図しない型が入る可能性があります。
+// object型と{}型：https://qiita.com/uhyo/items/e2fdef2d3236b9bfe74a#object%E5%9E%8B%E3%81%A8%E5%9E%8B
+// 後述のinterfaceを使ったほうが良いです。
 
 // 型アサーション
 // 型アサーションは、他の言語での型キャストに似ていますが、違う点はデータの特別なチェックや再構築は行いません。
