@@ -147,8 +147,8 @@ console.log(unusable);
 // num = null; // エラー：-strictNullChecksフラグを使用する場合は数値型にnull代入が許されない
 // console.log(num);
 
-// 文字列、null、または未定義のいずれかを渡したい場合は、Union型を使用できます。
-// Union型は|で代入されうる型を連結させます。
+// 文字列、null、または未定義のいずれかを渡したい場合は、共有体型を使用できます。
+// 共有体型は|で代入されうる型を連結させます。
 let str: string | null | undefined = undefined;
 str = null;
 str = "文字列";
@@ -167,7 +167,7 @@ try {
   console.log(error);
 }
 
-// 実際使う場合は意識する必要はあまりない（すべての型のサブタイプなのでUnionする必要もない）
+// 実際使う場合は意識する必要はあまりない（すべての型のサブタイプなので共有体型にする必要もない）
 function exec(message: string): string {
   if (message === "err") {
     throw new Error(message);

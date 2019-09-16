@@ -164,7 +164,7 @@ interface NumberDictionary {
   // name: string; // エラー：nameはインデクサーのサブタイプではない
 }
 
-// ただし、インデックスシグネチャがUnion型である場合、異なる型のプロパティは受け入れられます。
+// ただし、インデックスシグネチャが共有体型である場合、異なる型のプロパティは受け入れられます。
 interface NumberOrStringDictionary {
   [index: string]: number | string;
   length: number; // OK：lengthはnumber
