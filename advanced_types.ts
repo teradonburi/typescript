@@ -862,10 +862,10 @@ const inf4: Z4 = "fin";
 console.log(inf4);
 
 // 通常の型パラメーターの制約句でinfer宣言を使用することはできません。
-// type Return<T extends (...args: any[]) => infer R> = R;  // エラー：サポートしていません
+// type ReturnType<T extends (...args: any[]) => infer R> = R;  // エラー：サポートしていません
 
 // ただし、制約内の型変数を消去し、代わりに条件付きの型を指定することで、ほぼ同じ効果を得ることができます。
-type AnyFunction = (...args: any[]) => any;
-type Return<T extends AnyFunction> = T extends (...args: any[]) => infer R
-  ? R
-  : any;
+// type AnyFunction = (...args: any[]) => any;
+// type ReturnType<T extends AnyFunction> = T extends (...args: any[]) => infer R
+//   ? R
+//   : any;
