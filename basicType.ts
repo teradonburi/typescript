@@ -34,6 +34,9 @@ x = ["hello", 10]; // OK：宣言の型と順番が一致する必要がある
 // x = [10, "hello"]; // エラー：宣言の型と順番が一致する必要がある
 console.log(x);
 
+// もう少し高度な例：
+// https://qiita.com/uhyo/items/e2fdef2d3236b9bfe74a#%E3%82%BF%E3%83%97%E3%83%AB%E5%9E%8B%E3%81%A8%E5%8F%AF%E5%A4%89%E9%95%B7%E5%BC%95%E6%95%B0
+
 // Enum型：列挙型（省略した場合、0からインクリメントされた数値が列挙される）
 enum Color1 {
   Red, // 0
